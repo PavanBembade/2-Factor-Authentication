@@ -1,0 +1,70 @@
+.shake {
+  animation-name: shake, glow-red;
+  animation-duration: 0.7s, 0.35s;
+  animation-iteration-count: 1, 2;
+}
+@keyframes shake {
+  0%,
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(8px);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-8px);
+  }
+}
+@keyframes glow-red {
+  50% {
+    border-color: indianred;
+  }
+}
+/* .button {  
+  background: linear-gradient(to left, #3080e8 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: 0.5s ease-out;
+  animation-name: gradientAnimation;
+  animation-fill-mode: forwards;
+} */
+
+/* Button Gradient Animation */
+.button {
+  background: linear-gradient(to left, #3080e8 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: background-position 0.5s ease-out;
+  animation: gradientAnimation 0.3s ease-out forwards;
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: left bottom;
+  }
+  100% {
+    background-position: right bottom;
+  }
+}
+
+
+
+.blink-cursor {
+  animation: 1s steps(2, start) infinite blink;
+}
+
+.cursor {
+  border-bottom: 5px solid #ff8269;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
