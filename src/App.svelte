@@ -79,7 +79,7 @@
           {#each otp as digit, index}
             <input
               id={`otp-input-${index}`}
-              class="col-span-1 text-center border text-xl py-3 rounded-lg focus:outline-none 
+              class="col-span-1 text-center border text-xl font-medium py-3 rounded-lg focus:outline-none 
               {wrongOtp ? 'shake focus:border-red-500 focus:ring-1 focus:ring-red-500' : 'focus:border-sky-500 focus:ring-1 focus:ring-sky-500'} 
               {digit ? (wrongOtp ? 'border-red-500 text-red-800 bg-red-200/[0.10]' : 'border-sky-500 text-sky-600') : ''}"
               type="text"
